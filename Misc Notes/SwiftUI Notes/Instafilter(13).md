@@ -266,3 +266,25 @@ If you want to let them select an array of images, you can update your code like
 - you can also filter more specifically what kind of images you want users to be able to use
 
 - as well as add a label to the picker (the default is `Select a picture`)
+
+### ShareLink
+
+Let's us share content across apps and stuff.
+
+    struct ContentView: View {
+        var body: some View {
+            ShareLink(item: URL(string: "https://www.hackingwithswift.com:")!) {
+                Label("click here to share", systemImage: "swift")
+            }
+        }
+    }
+
+- You can customize your button using `Label()`
+
+You can also share more complex data using the following:
+
+    let example = Image(.example)
+
+    ShareLink(item: example, preview: SharePreview("Singapore Airport", image: example)) {
+        Label("Click to share", systemImage: "airplane")
+    }
