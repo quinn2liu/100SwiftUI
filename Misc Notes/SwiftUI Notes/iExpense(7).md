@@ -270,4 +270,3 @@ In this example, we're using a custom initializer to load the `UserDefaults' sto
     }
 
 Here, `didSet` is attached to `items`, meaning that whenever `items` is modified, the `didSet` block will be triggered. 
-
